@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="com.ronciao.experiment.elasticsearchSparkReadTest.SparkElasticsearchTest" time="17.636" errors="1" skipped="0">
+  <properties>
+    <property name="idea.version" value="14.0.3"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.45-b02"/>
+    <property name="user.country.format" value="GB"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="idea.launcher.port" value="7532"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/niccolo.becchi/IdeaProjects/ElasticsearchSparkIntegration"/>
+    <property name="java.runtime.version" value="1.8.0_45-b14"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/lf/4j66kq297695cwwknxvlkhshdrk4rt/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/usr/share/apache-maven-3.2.3/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/niccolo.becchi/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.9.5"/>
+    <property name="user.home" value="/Users/niccolo.becchi"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="idea.launcher.bin.path" value="/Applications/IntelliJ IDEA 14.app/Contents/bin"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="niccolo.becchi"/>
+    <property name="java.class.path" value="/usr/share/apache-maven-3.2.3/boot/plexus-classworlds-2.5.1.jar:/Applications/IntelliJ IDEA 14.app/Contents/lib/idea_rt.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="com.intellij.rt.execution.application.AppMain org.codehaus.classworlds.Launcher -Didea.version=14.0.3 test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_45"/>
+    <property name="java.ext.dirs" value="/Users/niccolo.becchi/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/share/apache-maven-3.2.3"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="com.ronciao.experiment.elasticsearchSparkReadTest.SparkElasticsearchTest" name="writeReadSparkEs_insert4DocsAndRead_VerifyNumDocsInserted" time="17.636">
+    <error message="Connect to localhost:9200 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1, localhost/fe80:0:0:0:0:0:0:1%1] failed: Connection refused" type="org.apache.http.conn.HttpHostConnectException">org.apache.http.conn.HttpHostConnectException: Connect to localhost:9200 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1, localhost/fe80:0:0:0:0:0:0:1%1] failed: Connection refused
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:107)
+	at io.searchbox.client.http.JestHttpClient.execute(JestHttpClient.java:50)
+	at com.ronciao.experiment.elasticsearchSparkReadTest.SparkElasticsearchTest.deleteElasticsearchIndex(SparkElasticsearchTest.java:88)
+	at com.ronciao.experiment.elasticsearchSparkReadTest.SparkElasticsearchTest.writeReadSparkEs_insert4DocsAndRead_VerifyNumDocsInserted(SparkElasticsearchTest.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 42 more
+</error>
+    <system-err>SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/niccolo.becchi/.m2/repository/org/slf4j/slf4j-log4j12/1.7.10/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/niccolo.becchi/.m2/repository/ch/qos/logback/logback-classic/1.0.13/logback-classic-1.0.13.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+Using Spark&apos;s default log4j profile: org/apache/spark/log4j-defaults.properties
+15/07/10 09:27:20 INFO SparkContext: Running Spark version 1.4.0
+15/07/10 09:27:36 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+15/07/10 09:27:36 WARN Utils: Your hostname, eulonml09191.local resolves to a loopback address: 127.0.0.1, but we couldn&apos;t find any external IP address!
+15/07/10 09:27:36 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+15/07/10 09:27:36 INFO SecurityManager: Changing view acls to: niccolo.becchi
+15/07/10 09:27:36 INFO SecurityManager: Changing modify acls to: niccolo.becchi
+15/07/10 09:27:36 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(niccolo.becchi); users with modify permissions: Set(niccolo.becchi)
+15/07/10 09:27:36 INFO Slf4jLogger: Slf4jLogger started
+15/07/10 09:27:36 INFO Remoting: Starting remoting
+15/07/10 09:27:36 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriver@127.0.0.1:49387]
+15/07/10 09:27:36 INFO Utils: Successfully started service &apos;sparkDriver&apos; on port 49387.
+15/07/10 09:27:36 INFO SparkEnv: Registering MapOutputTracker
+15/07/10 09:27:36 INFO SparkEnv: Registering BlockManagerMaster
+15/07/10 09:27:36 INFO DiskBlockManager: Created local directory at /private/var/folders/lf/4j66kq297695cwwknxvlkhshdrk4rt/T/spark-1aeb2b88-e5a4-4593-8060-0f950ba02d7c/blockmgr-88284406-911c-48bc-861c-234d66c0c2d9
+15/07/10 09:27:36 INFO MemoryStore: MemoryStore started with capacity 1966.1 MB
+15/07/10 09:27:36 INFO HttpFileServer: HTTP File server directory is /private/var/folders/lf/4j66kq297695cwwknxvlkhshdrk4rt/T/spark-1aeb2b88-e5a4-4593-8060-0f950ba02d7c/httpd-76860a33-3751-40c6-94df-0e0625829fb0
+15/07/10 09:27:36 INFO HttpServer: Starting HTTP Server
+15/07/10 09:27:37 INFO Utils: Successfully started service &apos;HTTP file server&apos; on port 49388.
+15/07/10 09:27:37 INFO SparkEnv: Registering OutputCommitCoordinator
+15/07/10 09:27:37 INFO Utils: Successfully started service &apos;SparkUI&apos; on port 4040.
+15/07/10 09:27:37 INFO SparkUI: Started SparkUI at http://127.0.0.1:4040
+15/07/10 09:27:37 INFO Executor: Starting executor ID driver on host localhost
+15/07/10 09:27:37 INFO Utils: Successfully started service &apos;org.apache.spark.network.netty.NettyBlockTransferService&apos; on port 49389.
+15/07/10 09:27:37 INFO NettyBlockTransferService: Server created on 49389
+15/07/10 09:27:37 INFO BlockManagerMaster: Trying to register BlockManager
+15/07/10 09:27:37 INFO BlockManagerMasterEndpoint: Registering block manager localhost:49389 with 1966.1 MB RAM, BlockManagerId(driver, localhost, 49389)
+15/07/10 09:27:37 INFO BlockManagerMaster: Registered BlockManager
+15/07/10 09:27:37 INFO JestClientFactory: Using multi thread/connection supporting pooling connection manager
+15/07/10 09:27:37 INFO JestClientFactory: Using default GSON instance
+15/07/10 09:27:37 INFO JestClientFactory: Node Discovery disabled...
+15/07/10 09:27:37 INFO JestClientFactory: Idle connection reaping disabled...
+15/07/10 09:27:37 INFO SparkUI: Stopped Spark web UI at http://127.0.0.1:4040
+15/07/10 09:27:37 INFO DAGScheduler: Stopping DAGScheduler
+15/07/10 09:27:38 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+15/07/10 09:27:38 INFO Utils: path = /private/var/folders/lf/4j66kq297695cwwknxvlkhshdrk4rt/T/spark-1aeb2b88-e5a4-4593-8060-0f950ba02d7c/blockmgr-88284406-911c-48bc-861c-234d66c0c2d9, already present as root for deletion.
+15/07/10 09:27:38 INFO MemoryStore: MemoryStore cleared
+15/07/10 09:27:38 INFO BlockManager: BlockManager stopped
+15/07/10 09:27:38 INFO BlockManagerMaster: BlockManagerMaster stopped
+15/07/10 09:27:38 INFO SparkContext: Successfully stopped SparkContext
+15/07/10 09:27:38 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+</system-err>
+  </testcase>
+</testsuite>
