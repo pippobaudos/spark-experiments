@@ -20,6 +20,7 @@ import java.util.Arrays;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class SparkElasticsearchTest {
 
@@ -42,9 +43,16 @@ public class SparkElasticsearchTest {
     }
 
     @Test
-    public void writeReadSparkEs_insert4DocsAndRead_VerifyNumDocsInserted() throws IOException {
+    public void writeReadSparkEs_insert4DocsAndRead_VerifyNumDocsInserted() {
 
-        deleteElasticsearchIndex();
+        try {
+            deleteElasticsearchIndex();
+        }
+        catch (IOException e) {
+            fail("Not possible to connect to the ELASTICSEARCH instance: " + HOST + ":" + PORT + ". Is it RUNNING???");
+        }
+
+
         insert2DocsWithSaveToEs();
         Insert2DocsWithSaveJsonToEs();
 
